@@ -60,15 +60,15 @@ You should see entries for both `Python (phd)` and `ir` in the output.
 2. **Add Language Cells**:
    - The Polyglot Notebooks extension allows you to switch between languages within a single notebook.
    - At the bottom-right of each cell, you can select which language to use (Python, R) but also SQL, javascript, C#, C++ and much more !
-   - If you cant select R and python directly, use those commands and replace *phd* by your environment name (without stars) *phd* -> myenvname
+   - If you cant select R and python directly, use those commands and replace phd by your environment name phd -> myenvname
 ```polyglot cell
-#!connect jupyter --kernel-name *phd*-python --conda-env *phd* --kernel-spec python3
-#!connect jupyter --kernel-name Rkernel --conda-env *phd* --kernel-spec ir
+#!connect jupyter --kernel-name phd-python --conda-env phd --kernel-spec python3
+#!connect jupyter --kernel-name Rkernel --conda-env phd --kernel-spec ir
 ```
 
 ## Step 6: Sharing Variables Between Python and R
 ### Using `#!set` to Share Variables
-- To share variables between Python and R kernels, you can use the `#!set` directive. Don't forget to adapt *phd* to your environment name.
+- To share variables between Python and R kernels, you can use the `#!set` directive. Don't forget to adapt phd to your environment name.
 - **Python to R Example**:
   1. **Python Cell**:
      ```python
@@ -76,7 +76,7 @@ You should see entries for both `Python (phd)` and `ir` in the output.
      ```
   2. **R Cell**:
      ```r
-     #!set --value @*phd*-python:test --name fromPyt
+     #!set --value @phd-python:test --name fromPyt
      print(fromPyt)
      ```
-- The `#!set` directive shares the Python variable (`data`) and makes it accessible in R. You can do the opposite by replacing @*phd*-python by @Rkernel or the name of your R kernel if you used another name. You can also add Julia kernels and other languages but I did not test that yet.
+- The `#!set` directive shares the Python variable (`data`) and makes it accessible in R. You can do the opposite by replacing @phd-python by @Rkernel or the name of your R kernel if you used another name. You can also add Julia kernels and other languages but I did not test that yet.
