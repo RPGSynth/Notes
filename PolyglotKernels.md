@@ -61,8 +61,10 @@ You should see entries for both `Python (phd)` and `ir` in the output.
    - The Polyglot Notebooks extension allows you to switch between languages within a single notebook.
    - At the bottom-right of each cell, you can select which language to use (Python, R) but also SQL, javascript, C#, C++ and much more !
    - If you cant select R and python directly, use those commands and replace *phd* by your environment name (without stars) *phd* -> myenvname
+```polyglot cell
 `#!connect jupyter --kernel-name *phd*-python --conda-env *phd* --kernel-spec python3`
 `#!connect jupyter --kernel-name Rkernel --conda-env *phd* --kernel-spec ir`
+```
 
 ## Step 6: Sharing Variables Between Python and R
 ### Using `#!set` to Share Variables
