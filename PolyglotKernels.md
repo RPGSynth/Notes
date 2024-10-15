@@ -79,4 +79,4 @@ You should see entries for both `Python (phd)` and `ir` in the output.
      #!set --value @*phd*-python:test --name fromPyt
      print(fromPyt)
      ```
-- The `#!set` directive shares the Python variable (`data`) and makes it accessible in R.
+- The `#!set` directive shares the Python variable (`data`) and makes it accessible in R. You can do the opposite by replacing @*phd*-python by @Rkernel or the name of your R kernel if you used another name. You can also add Julia kernels and other languages but I did not test that yet.
